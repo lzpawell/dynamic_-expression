@@ -13,8 +13,27 @@
     tools:context="com.example.lzp.dynamic_expression.activity.MenuActivity"
     tools:showIn="@layout/activity_menu">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_menu_shot"
+        android:text="shot"
+        android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_above="@+id/btn_menu_show_history"
+        android:layout_alignStart="@+id/btn_menu_show_history"
+        android:layout_marginBottom="104dp"
+        android:onClick="btnShotOnClick"/>
+
+    <Button
+        android:id="@+id/btn_menu_show_history"
+        android:text="历史纪录"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="128dp"
+        android:onClick="btnHistoryRecordOnClick"/>
+
+
 </RelativeLayout>
