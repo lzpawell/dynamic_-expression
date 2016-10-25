@@ -10,6 +10,9 @@ import android.util.Log;
 
 import com.example.lzp.dynamic_expression.model.DataModel;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by lzp on 2016/10/25.
  */
@@ -45,9 +48,9 @@ public class AnimationFactory {
 
 
     /*根据动态表情模板数组生成一组android animationDrawable*/
-    public static AnimationDrawable[] createDynamicPhoto(DataModel[] dataModels, Bitmap toBeAdd){
+    public static List<AnimationDrawable> createDynamicPhoto(List<DataModel> dataModels, Bitmap toBeAdd){
         toBeAdd = Bitmap.createScaledBitmap(toBeAdd,200,200,true);
-        AnimationDrawable[] animationDrawables = new AnimationDrawable[dataModels.length];
+        List<AnimationDrawable> animationDrawables = new LinkedList<>();
         int cnt = 0;
         for(DataModel model : dataModels){
             int[] posXs = model.getPosXs(),
@@ -63,7 +66,7 @@ public class AnimationFactory {
                 newBitmaps[i] = compositePhoto(bitmaps[i],toBeAdd,posXs[i],posYs[i],rotations[i]);
             }
 
-            animationDrawables[cnt++] = compositeDynamivPhoto(newBitmaps,durations);
+            animationDrawables.add(compositeDynamivPhoto(newBitmaps,durations));
 
         }
 

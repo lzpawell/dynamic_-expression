@@ -50,6 +50,10 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     protected void btnHistoryRecordOnClick(View v){
-        /*2016/10/25生成，待填充*/
+        Intent intent = new Intent(MenuActivity.this, DisplayActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("MODE",DisplayActivity.MODE_SHOW_HISTORY);
+        intent.putExtra("MODE",bundle);
+        startActivity(intent);
     }
 }
