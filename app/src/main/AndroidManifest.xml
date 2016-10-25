@@ -25,7 +25,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CameraActivity"></activity>
+        <activity android:name=".activity.CameraActivity" />
+        <activity
+            android:name=".activity.WaitCreateActivity"
+            android:label="@string/title_activity_wait_create"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.DisplayActivity"
+            android:label="@string/title_activity_display"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
