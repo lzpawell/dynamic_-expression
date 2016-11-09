@@ -50,7 +50,7 @@ public class WaitCreateActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         progressbar = (ProgressBar)findViewById(R.id.progress_bar);
-        //获取intent 并从中得出其中的bitmap
+
         task.execute();
     }
 
